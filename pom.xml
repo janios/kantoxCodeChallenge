@@ -17,6 +17,8 @@
         <fmt-maven-plugin.version>2.10</fmt-maven-plugin.version>
         <easy-rules-version>3.2.0</easy-rules-version>
         <guava-version>31.0.1-jre</guava-version>
+        <spoke-version>1.3-groovy-2.5</spoke-version>
+        <groovy-version>2.4.21</groovy-version>
     </properties>
 
     <dependencies>
@@ -41,6 +43,18 @@
             <artifactId>guava</artifactId>
             <version>${guava-version}</version>
         </dependency>
+        <dependency>
+            <groupId>org.spockframework</groupId>
+            <artifactId>spock-core</artifactId>
+            <version>${spoke-version}</version>
+        </dependency>
+        <dependency> <!-- use a specific Groovy version rather than the one specified by spock-core -->
+            <groupId>org.codehaus.groovy</groupId>
+            <artifactId>groovy-all</artifactId>
+            <version>${groovy-version}</version>
+            <scope>test</scope>
+        </dependency>
+
     </dependencies>
 
     <build>
