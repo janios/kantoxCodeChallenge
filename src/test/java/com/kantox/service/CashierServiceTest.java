@@ -58,21 +58,34 @@ public class CashierServiceTest {
 
   @Test
   public void cashierServiceGreeTea3Items() {
-    List<Item> itemList = ImmutableList.of(new Item(Product.GR1), new Item(Product.GR1), new Item(Product.GR1));
+    List<Item> itemList =
+        ImmutableList.of(new Item(Product.GR1), new Item(Product.GR1), new Item(Product.GR1));
     BigDecimal totalPrice = CashierService.getTotalPrice(itemList);
     assertEquals(BigDecimal.valueOf(6.22).setScale(2), totalPrice);
   }
 
   @Test
   public void cashierServiceGreeTea5Items() {
-    List<Item> itemList = ImmutableList.of(new Item(Product.GR1), new Item(Product.GR1), new Item(Product.GR1), new Item(Product.GR1), new Item(Product.GR1));
+    List<Item> itemList =
+        ImmutableList.of(
+            new Item(Product.GR1),
+            new Item(Product.GR1),
+            new Item(Product.GR1),
+            new Item(Product.GR1),
+            new Item(Product.GR1));
     BigDecimal totalPrice = CashierService.getTotalPrice(itemList);
     assertEquals(BigDecimal.valueOf(9.33).setScale(2), totalPrice);
   }
 
   @Test
-  public void cashierServiceTestCases(){
-    List<Item> itemList = ImmutableList.of(new Item(Product.GR1), new Item(Product.SR1), new Item(Product.GR1), new Item(Product.GR1), new Item(Product.CF1));
+  public void cashierServiceTestCases() {
+    List<Item> itemList =
+        ImmutableList.of(
+            new Item(Product.GR1),
+            new Item(Product.SR1),
+            new Item(Product.GR1),
+            new Item(Product.GR1),
+            new Item(Product.CF1));
     BigDecimal totalPrice = CashierService.getTotalPrice(itemList);
     assertEquals(BigDecimal.valueOf(22.45).setScale(2), totalPrice);
 
@@ -80,14 +93,23 @@ public class CashierServiceTest {
     totalPrice = CashierService.getTotalPrice(itemList);
     assertEquals(BigDecimal.valueOf(3.11).setScale(2), totalPrice);
 
-    itemList = ImmutableList.of(new Item(Product.SR1), new Item(Product.SR1), new Item(Product.GR1), new Item(Product.SR1) );
+    itemList =
+        ImmutableList.of(
+            new Item(Product.SR1),
+            new Item(Product.SR1),
+            new Item(Product.GR1),
+            new Item(Product.SR1));
     totalPrice = CashierService.getTotalPrice(itemList);
     assertEquals(BigDecimal.valueOf(16.61).setScale(2), totalPrice);
 
-    itemList = ImmutableList.of(new Item(Product.GR1), new Item(Product.CF1), new Item(Product.SR1), new Item(Product.CF1), new Item(Product.CF1) );
+    itemList =
+        ImmutableList.of(
+            new Item(Product.GR1),
+            new Item(Product.CF1),
+            new Item(Product.SR1),
+            new Item(Product.CF1),
+            new Item(Product.CF1));
     totalPrice = CashierService.getTotalPrice(itemList);
     assertEquals(BigDecimal.valueOf(30.57).setScale(2), totalPrice);
-
   }
-
 }

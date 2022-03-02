@@ -4,6 +4,7 @@ import java.math.BigDecimal;
 
 public class CodeChallengeConstants {
 
+  public static final String NO_DISCOUNT = "None";
   public static final String STRAWBERRIES_BULK_PURCHASES = "Strawberries bulk purchase";
   public static final String FACT_ITEMS = "itemList";
   public static final int STRAWBERRIES_BULK_PURCHASE_MINIMUM = 3;

@@ -36,7 +36,7 @@ public class GreenTeaBuyOneGetOneFree {
         greenItem.setDiscount(GREEN_TEA_STRING);
         greenItem.setDiscountPrice(BigDecimal.ZERO);
       }
-      count ++;
+      count++;
     }
   }
 }
