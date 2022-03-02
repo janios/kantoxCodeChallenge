@@ -8,13 +8,13 @@ This project was created as an Coding Exercise for Kantox
 <br />
 <div align="center">
   <a>
-    <img src="logo.png" alt="Logo" width="80" height="80">
+    <img src="logo.png" alt="Logo" width="180" height="100">
   </a>
 </div>
 
 
 a simple 
-cashier function that adds products to a cart and displays the total price.
+cashier service that adds products to a cart and displays the total price.
 
 
 <!-- GETTING STARTED -->
