@@ -20,7 +20,7 @@ import org.jeasy.rules.annotation.Rule;
 public class CoffeeDiscount {
 
   @Condition
-  public boolean coffeeDiscount(@Fact(FACT_ITEMS) List<Item> itemList) {
+  public boolean coffee3OrMore(@Fact(FACT_ITEMS) List<Item> itemList) {
     Map<Product, Long> map =
         itemList.stream().collect(groupingBy(Item::getProduct, Collectors.counting()));
     return map.containsKey(Product.CF1) && map.get(Product.CF1) >= COFFEE_DISCOUNT_MINIMUM;

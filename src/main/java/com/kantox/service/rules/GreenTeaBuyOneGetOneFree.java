@@ -20,7 +20,7 @@ import org.jeasy.rules.annotation.Rule;
 public class GreenTeaBuyOneGetOneFree {
 
   @Condition
-  public boolean discountGreenTea(@Fact(FACT_ITEMS) List<Item> itemList) {
+  public boolean buyOneGetOneFree(@Fact(FACT_ITEMS) List<Item> itemList) {
     Map<Product, Long> map =
         itemList.stream().collect(groupingBy(Item::getProduct, Collectors.counting()));
     return map.containsKey(Product.GR1) && map.get(Product.GR1) >= 2;
