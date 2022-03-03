@@ -29,7 +29,8 @@ on the root folder
 ### Prerequisites
 
 In order to compile this project you will need
-* java 8 or higher
+* java 8 or java 11
+* Not compatible with Java 17
 * maven 3.5 or higher  
 
 
